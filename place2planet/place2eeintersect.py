@@ -15,8 +15,8 @@ path=os.path.dirname(os.path.realpath(__file__))
 sys.path.insert(0, path)
 try:
     ee.Initialize()
-except Exception, e:
-    print 'Authenticate Earth Engine first and rerun program'
+except Exception as e:
+    print('Authenticate Earth Engine first and rerun program')
     time.sleep(2)
     os.system('earthengine authenticate')
 src=os.path.dirname(os.path.realpath(__file__))
@@ -24,7 +24,7 @@ try:
     api_key = find_api_key()
     os.environ['PLANET_API_KEY'] = find_api_key()
 except:
-    print 'Failed to get Planet Key'
+    print('Failed to get Planet Key')
     sys.exit()
 l=[]
 
